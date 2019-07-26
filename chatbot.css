@@ -1,0 +1,67 @@
+.bot {
+  margin: auto;
+  text-align: center;
+  vertical-align: center;
+  text-shadow: 0 0 3px #fff1a8,0 0 3px #fff1a8, 0 0 3px #fff1a8;
+}
+body{
+  background-color:rgb(255, 143, 86);
+  background-image: url("https://i.pinimg.com/originals/7f/94/ba/7f94baad901f52e92f82165908d3c6d7.gif");
+  background-size: 250px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  font-family: Verdana, Geneva, sans-serif
+}
+
+#chatLog{
+    color:rgb(45, 92, 127)
+
+}
+
+#intro{
+    color:rgb(45, 92, 127)
+}
+
+#profile{
+  padding: justify;
+  border: 2px solid #fff1a8;
+  color: #fff1a8;
+  background-color:rgb(45, 92, 127)
+}
+
+#profile:hover{
+  background-color: #fff1a8;
+  color:rgb(45, 92, 127);
+}
+
+#concerts{
+  padding: justify;
+  border: 2px solid #fff1a8;
+  color: #fff1a8;
+  background-color:rgb(45, 92, 127)
+}
+
+#concerts:hover{
+  background-color: #fff1a8;
+  color:rgb(45, 92, 127);
+}
+
+#lyrics{
+  padding: justify;
+  border: 2px solid #fff1a8;
+  color: #fff1a8;
+  background-color:rgb(45, 92, 127)
+}
+
+#lyrics:hover{
+  background-color: #fff1a8;
+  color:rgb(45, 92, 127);
+}
+
+.border{
+  border: 20px solid transparent;
+  padding: 5px;
+  border-image-source: url("https://media.giphy.com/media/P6FmEF7qY6ViM/giphy.gif");
+  border-image-repeat: round;
+  border-image-slice: 30;
+}
