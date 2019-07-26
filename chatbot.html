@@ -1,0 +1,104 @@
+<html>
+    <head>
+      <link rel="stylesheet" type="text/css" href="chatbot.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="tumblr_2.css">
+        <script>
+            function talk() {
+                document.getElementById("intro").style.display="none";
+                var user = document.getElementById("userBox").value;
+                user= user.toLowerCase();
+                document.getElementById("chatLog").innerHTML= "Type in an artist's name or some lyrics from a song to begin...";
+              }
+            function profileopen(){
+                var user = document.getElementById("userBox").value;
+                user= user.toLowerCase();
+                var profile= "https://open.spotify.com/search/results/";
+                if (/\s/.test(user)){
+                  var space= user.replace(/ /g,"%20");
+                  profile= profile + space;
+                  window.open(profile);
+                }else{
+                    profile=profile+user;
+                    window.open(profile);
+                        }
+            }
+            function concerts(){
+              var user = document.getElementById("userBox").value;
+              user= user.toLowerCase();
+              var profile= "https://www.songkick.com/search?page=1&per_page=10&query=PPPPP&type=upcoming";
+              if (/\s/.test(user)){
+                var space= user.replace(/ /g,"+");
+                space= profile.replace(/PPPPP/g,space)
+                profile= profile + space;
+                window.open(profile);
+              }else{
+                  user= profile.replace(/PPPPP/g,user)
+                  profile= profile+user;
+                  window.open(profile);
+                    }
+            }
+            function find(){
+              var user = document.getElementById("userBox").value;
+              user= user.toLowerCase();
+              var profile="https://genius.com/search?q=";
+              if(/\s/.test(user)){
+                var space=user.replace(/ /g,"%20");
+                profile=profile+space;
+                window.open(profile);
+              }else{
+                profile=profile+user;
+                window.open(profile);
+              }
+            }
+        </script>
+    </head>
+    <body>
+
+
+
+      <div class="icon-bar">
+  <img src="MUMBLER_LOGO.png" alt="logo">
+    <a class="/action_page.php" href="#">
+        <div class="topnav">
+          <div class="search-container">
+            <form action="/action_page.php">
+              <script async src="https://cse.google.com/cse.js?cx=000888210889775888983:pqb3ch1ewhg"></script>
+
+              <div class="gcse-searchbox-only" data-resultsUrl="https://googlecustomsearch.appspot.com/elementv2/two-page_results_elements_v2.html?query=test"></div>
+              <!-- <button onclick="fa fa-search"></button> -->
+              <p id="demo"></p>
+
+              <script>
+              function myFunction() {
+                var x = document.getElementById("mySearch").placeholder;
+                document.getElementById("demo").innerHTML = x;
+              }
+              </script>
+
+            </form>
+          </div>
+        </div>
+    </a>
+    <a href="home-page.html"><i class="fa fa-home"></i></a>
+    <a href="chatbot.html"><i class="fa fa-male"></i></a>
+  </div>
+
+
+
+
+      <div class="bot">
+        <div class="border">
+        <p>- - K A R U N A - -<br></p>
+        <p id="chatLog"> </p>
+        <p id="intro">Type in an artist's name or some lyrics from a song to begin... </p>
+        <input id="userBox" type="text" onkeydown="if (event.keyCode == 13) {talk()}">
+        <button type="submit" id="profile" onclick="profileopen()" name="profile" value="Profile">Profile</button>
+        <button type="submit" id="concerts" onclick="concerts()" name="concerts" value=">Concerts">Concerts</button>
+        <button type="submit" id="lyrics" onclick="find()" name="lyrics" value="Find Song">Find Song</button>
+      </div>
+        </div>
+
+
+      </body>
+</html>
